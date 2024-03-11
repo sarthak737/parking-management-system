@@ -3,45 +3,516 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parking Management System</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <title>Parking</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Parking Management System</h1>
-      <div class="vehicle-buttons">
-        <div class="vehicle-button">
-          <button onclick="decrementVehicle('bike')">-</button>
-          <span id="bike-count">0</span>
-          <button onclick="incrementVehicle('bike')">+</button>
-          <label for="bike">Bikes</label>
-        </div>
-        <div class="vehicle-button">
-          <button onclick="decrementVehicle('car')">-</button>
-          <span id="car-count">0</span>
-          <button onclick="incrementVehicle('car')">+</button>
-          <label for="car">Cars</label>
-        </div>
-        <div class="vehicle-button">
-          <button onclick="decrementVehicle('truck')">-</button>
-          <span id="truck-count">0</span>
-          <button onclick="incrementVehicle('truck')">+</button>
-          <label for="truck">Trucks</label>
-        </div>
-        <div class="vehicle-button">
-          <button onclick="decrementVehicle('other')">-</button>
-          <span id="other-count">0</span>
-          <button onclick="incrementVehicle('other')">+</button>
-          <label for="other">Other</label>
-        </div>
-      </div>
-      <div class="action-buttons">
-        <button onclick="resetCount()">Reset All</button>
-        <button onclick="calculateCharge()">Calculate</button>
-      </div>
-      <div class="result" id="result"></div>
-    </div>
+    <header class="header">
+      <a href="#"><img class="logo" src="./img/logo.png" alt="Car logo" /></a>
 
-    <script src="script.js"></script>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">How it works</a></li>
+          <li><a href="#" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#" class="main-nav-link">Picing</a></li>
+          <li>
+            <a href="#section-pricing" class="main-nav-link nav-cta"
+              >Park now</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-textbox">
+            <h1 class="heading-primary">
+              Daily parking made effortless – right where you need it,
+              hassle-free
+            </h1>
+            <p class="hero-description">
+              Experience effortless parking all year round with our smart
+              365-day subscription. Tailored to your convenience and parking
+              needs.
+            </p>
+
+            <a href="#" class="btn btn--full margin-right-sm">Park Here</a>
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img
+                  src="./img/customers/customer-1.jpg"
+                  alt="Customer Photo"
+                />
+                <img
+                  src="./img/customers/customer-2.jpg"
+                  alt="Customer Photo"
+                />
+                <img
+                  src="./img/customers/customer-3.jpg"
+                  alt="Customer Photo"
+                />
+                <img
+                  src="./img/customers/customer-4.jpg"
+                  alt="Customer Photo"
+                />
+                <img
+                  src="./img/customers/customer-5.jpg"
+                  alt="Customer Photo"
+                />
+                <img
+                  src="./img/customers/customer-6.jpg"
+                  alt="Customer Photo"
+                />
+              </div>
+              <div class="delivered-text">
+                <span>250,000+</span> vehicle owners parked their vehicle last
+                year!
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-imagebox">
+            <img src="./img/hero.png" class="hero-img" alt="Parking images" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As Featured In</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Tech Crunch" />
+            <img src="img/logos/business-insider.png" alt="Business Insider" />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes" />
+            <img src="img/logos/usa-today.png" alt="USA Today" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading">How it works</span>
+          <h2 class="heading-secondary">Streamlined Parking in 3 Easy Steps</h2>
+        </div>
+        <div class="container grid grid--2-cols grid--center-v">
+          <div class="step-text-box">
+            <p class="step-number">01</p>
+            <h3 class="heading-tertiary">Enter Owner Details</h3>
+            <p class="step-description">
+              Provide the owner's full name, vehicle type, and registration
+              number accurately, ensuring seamless record-keeping and
+              identification within our system.
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="./img/app/app-screen-1.png"
+              class="step-img"
+              alt="iPhone app preferences"
+            />
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="./img/app/app-screen-2.png"
+              class="step-img"
+              alt="iPhone app meal order"
+            />
+          </div>
+          <div class="step-text-box">
+            <p class="step-number">02</p>
+            <h3 class="heading-tertiary">Select Vehicle Type</h3>
+            <p class="step-description">
+              Choose the specific vehicle type from our options menu. Each
+              selection automatically determines the corresponding pricing,
+              streamlining your parking selection process effortlessly.
+            </p>
+          </div>
+          <div class="step-text-box">
+            <p class="step-number">03</p>
+            <h3 class="heading-tertiary">Generate Receipt</h3>
+            <p class="step-description">
+              Our system swiftly generates a comprehensive receipt, detailing
+              essential information like parking duration, location, and any
+              additional charges, offering you a complete overview of your
+              parking session.
+            </p>
+          </div>
+          <div class="step-img-box">
+            <img
+              src="./img/app/app-screen-3.png"
+              class="step-img"
+              alt="iPhone app delivery"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section-testimonials">
+        <div class="testimonials-container">
+          <span class="subheading">Testimonials</span>
+          <h2 class="heading-secondary">
+            Once you've experienced our parking service, you won't want to go
+            back.
+          </h2>
+
+          <div class="testimonials grid grid--2-cols">
+            <figure class="testimonial">
+              <img
+                src="img/customers/dave.jpg"
+                class="testimonial-img"
+                alt="Customer Dave"
+              />
+
+              <blockquote class="testimonial-text">
+                Quick and hassle-free parking experience. Highly recommended!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Dave Bryson</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="img/customers/ben.jpg"
+                class="testimonial-img"
+                alt="Customer Ben"
+              />
+
+              <blockquote class="testimonial-text">
+                Impressed by the simplicity and speed of this parking service.
+                Will use again!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Ben Hadley</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="img/customers/steve.jpg"
+                class="testimonial-img"
+                alt="Custo Steve"
+              />
+
+              <blockquote class="testimonial-text">
+                Game-changer for urban parking. Easy to use and efficient!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Steve Miller</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="img/customers/hannah.jpg"
+                class="testimonial-img"
+                alt="Custo Hannah"
+              />
+
+              <blockquote class="testimonial-text">
+                Love how straightforward this parking solution is. No more
+                circling for spots!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Hannah Smith</p>
+            </figure>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-1.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-2.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-3.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-4.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-5.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-6.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-7.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-8.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-9.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-10.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-11.jpg" alt="Parking image" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-12.jpg" alt="Parking image" />
+          </figure>
+        </div>
+      </section>
+      <section class="section-pricing" id="section-pricing">
+        <div class="container">
+          <span class="subheading">Pricing</span>
+          <h2 class="heading-secondary">
+            Parking without emptying your wallet.
+          </h2>
+        </div>
+        <div class="container grid grid--2-cols margin-bottom-md">
+          <div class="pricing-plan pricing-plan--starter">
+            <header class="plan-header">
+              <p class="plan-name">Basic</p>
+              <p class="plan-price"><span>$</span>29.99</p>
+              <p class="plan-text">per month. That's less than $1 per day!</p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span>Unlimited parking</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span>Accessible 24/7</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span>Dedicated customer support</span>
+              </li>
+              <li>
+                <ion-icon class="list-icon" name="close-outline"></ion-icon>
+                <span></span>
+              </li>
+            </ul>
+            <div class="plan-sign-up center-text">
+              <a href="park.html" class="btn btn--full" id="park">Park Now</a>
+            </div>
+          </div>
+
+          <div class="pricing-plan pricing-plan--complete">
+            <header class="plan-header">
+              <p class="plan-name">Complete</p>
+              <p class="plan-price"><span>$</span>199</p>
+              <p class="plan-text">That's less than $0.55 per day!</p>
+            </header>
+
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span><strong>Unlimited</strong> parking</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span>Accessible <strong>24/7</strong></span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span>Dedicated customer support</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+                ><span><strong>Priority</strong> parking slots</span>
+              </li>
+            </ul>
+            <div class="plan-sign-up center-text">
+              <a href="park.html" class="btn btn--full" id="park">Park Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="container grid">
+          <aside class="plan-details">
+            Prices include all applicable taxes. You can cancel at any time.
+            Both plans include the following:
+          </aside>
+        </div>
+        <div class="container grid grid--2-cols">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+            <p class="feature-title">Convenience</p>
+            <o class="feature-text"
+              >Enjoy hassle-free parking every day plans.</o
+            >
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+            <p class="feature-title">Pause anytime</p>
+            <o class="feature-text"
+              >Just pause your subscription, and we refund.</o
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary cta-heading">
+                Claim your first parking for free!
+              </h2>
+              <p class="cta-text">
+                Experience seamless, stress-free parking solutions today. Start
+                your hassle-free parking journey now. No commitments, pause or
+                cancel anytime. And enjoy your first session on us!
+              </p>
+              <form action="#" class="cta-form">
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
+                  <select id="select-where">
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">Youtube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-form">Sign up now</button>
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container grid grid--5-cols footer-grid">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"
+            ><img
+              class="logo footer-logo"
+              src="./img/logo.png"
+              alt="Omnifood logo"
+          /></a>
+          <ul class="social-links">
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2027 by Parking, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+            </p>
+            <p>
+              <a class="footer-link" href="mailto:hello@omnifood.com"
+                >hello@parking.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Us</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Our partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Recipe directory</a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
