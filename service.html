@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/service-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="shortcut icon"
+      href="./img/service/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/service-responsive.css" />
+    <title>Park Now</title>
+  </head>
+
+  <body>
+    <!--? Servies Section Start -->
+    <section id="services">
+      <div class="services-head">
+        <h1>Services</h1>
+      </div>
+      <div id="services-main">
+        <div class="form-container">
+          <div class="form-enhancer">
+            <img src="./img/service/logo.png" alt="" />
+          </div>
+          <form id="form">
+            <div class="input-box">
+              <input type="text" id="name" placeholder="Name" />
+            </div>
+            <div class="input-box" id="vehicleType">
+              <div class="select-text">Select your vehicle</div>
+              <ul id="vehicle">
+                <li>Jeep</li>
+                <li>Bike</li>
+                <li>Car</li>
+                <li>Bus</li>
+                <li>Truck</li>
+              </ul>
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                id="reg_num"
+                placeholder="Registeration number"
+              />
+            </div>
+
+            <div>
+              <a id="gotoServicesPage">
+                <button type="button" value="Find Slot" onclick="findSlot()">
+                  <span> Find Slot </span>
+                  <img id="tukur" src="./img/service/giphy.webp" />
+                </button>
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="arrow-of-services">
+          <div class="arrow-services">
+            <img src="./img/service/red-arrow.webp" alt="" />
+          </div>
+        </div>
+        <div class="parking-gif">
+          <!-- <img src="https://cdn.dribbble.com/users/2118336/screenshots/12113942/media/ec72a5e052af7792a64a1f3fd156af28.gif"
+                              alt=""> -->
+          <img src="./img/service/Parking.png" alt="" />
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <section id="parking">
+        <div class="overlay-searching">
+          <div class="loader-searching" id="loader-searching">
+            <div>
+              <img src="./img/service/animated-car-image-0252.gif" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="floor">
+          <div id="lane1" class="lane">
+            <div class="slot" id="slot-1">
+              <img src="./img/service/Bike.png" alt="" />
+            </div>
+            <div class="slot" id="slot-2">
+              <img src="./img/service/Bike.png" alt="" />
+            </div>
+            <div class="slot" id="slot-3">
+              <img src="./img/service/Bike.png" alt="" />
+            </div>
+            <div class="slot" id="slot-4">
+              <img src="./img/service/Bike.png" alt="" />
+            </div>
+            <div class="slot" id="slot-5">
+              <img src="./img/service/Bike.png" alt="" />
+            </div>
+          </div>
+          <div id="lane2" class="lane">
+            <div class="slot" id="slot-1">
+              <img src="./img/service/Jeep.png" alt="" />
+            </div>
+            <div class="slot" id="slot-2">
+              <img src="./img/service/Jeep.png" alt="" />
+            </div>
+            <div class="slot" id="slot-3">
+              <img src="./img/service/Jeep.png" alt="" />
+            </div>
+            <div class="slot" id="slot-4">
+              <img src="./img/service/Jeep.png" alt="" />
+            </div>
+            <div class="slot" id="slot-5">
+              <img src="./img/service/Jeep.png" alt="" />
+            </div>
+          </div>
+          <div id="lane3" class="lane">
+            <div class="slot" id="slot-1">
+              <img src="./img/service/Car.png" alt="" />
+            </div>
+            <div class="slot" id="slot-2">
+              <img src="./img/service/Car.png" alt="" />
+            </div>
+            <div class="slot" id="slot-3">
+              <img src="./img/service/Car.png" alt="" />
+            </div>
+            <div class="slot" id="slot-4">
+              <img src="./img/service/Car.png" alt="" />
+            </div>
+            <div class="slot" id="slot-5">
+              <img src="./img/service/Car.png" alt="" />
+            </div>
+          </div>
+          <div id="lane4" class="lane">
+            <div class="slot" id="slot-1">
+              <img src="./img/service/Bus.png" alt="" />
+            </div>
+            <div class="slot" id="slot-2">
+              <img src="./img/service/Bus.png" alt="" />
+            </div>
+            <div class="slot" id="slot-3">
+              <img src="./img/service/Bus.png" alt="" />
+            </div>
+            <div class="slot" id="slot-4">
+              <img src="./img/service/Bus.png" alt="" />
+            </div>
+            <div class="slot" id="slot-5">
+              <img src="./img/service/Bus.png" alt="" />
+            </div>
+          </div>
+          <div id="lane5" class="lane">
+            <div class="slot" id="slot-1">
+              <img src="./img/service/Truck.png" alt="" />
+            </div>
+            <div class="slot" id="slot-2">
+              <img src="./img/service/Truck.png" alt="" />
+            </div>
+            <div class="slot" id="slot-3">
+              <img src="./img/service/Truck.png" alt="" />
+            </div>
+            <div class="slot" id="slot-4">
+              <img src="./img/service/Truck.png" alt="" />
+            </div>
+            <div class="slot" id="slot-5">
+              <img src="./img/service/Truck.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="parking-recipt">
+          <div class="recipt-container">
+            <h1>--Parking Receipt--</h1>
+            <div class="recipt-date">
+              <div class="recipt">Receipt no: <span> --</span></div>
+              <div class="date">Date: <span> --</span></div>
+            </div>
+            <div class="name">Name: <span> --</span></div>
+
+            <div class="reg_num">Reg no: <span>--</span></div>
+
+            <div class="type">Vehicle type: <span> --</span></div>
+
+            <div class="floor-slot">
+              <div class="floor">Floor no: <span>--</span></div>
+              <span>|</span>
+              <div class="Lane">Lane no: <span>--</span></div>
+              <span>|</span>
+              <div class="Slot">Slot no: <span> --</span></div>
+            </div>
+            <div class="totalPrice">Total price: <span> --</span></div>
+            <div class="promo-code">
+              <div class="promo">
+                <input type="text" placeholder="Enter Coupon code" />
+              </div>
+              <div class="apply_promo">
+                <button>Apply Promo</button>
+              </div>
+            </div>
+
+            <div class="pay">
+              <button>Pay <span></span></button>
+            </div>
+
+            <div id="paid">
+              <img src="./img/service/paid.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!--? Servies Section End -->
+
+    <!--? About Section Start -->
+    <section id="about">
+      <div class="about-head">
+        <p>About Us</p>
+        <p>We are offering these services</p>
+      </div>
+      <div class="about-container1">
+        <div class="about-left">
+          <img src="./img/service/sedan.png" alt="" />
+        </div>
+        <div class="about-right">
+          <div>
+            <h1>About Safety</h1>
+            <p>
+              We are offering the the additional lighting for better view, and
+              24/7 camera surveillance and our cameras are not older analog CCTV
+              cameras were hard-wired, newer security cameras connect wirelessly
+              to the Internet and record data straight into the cloud. License
+              plate recognition features that capture the characters on a plate
+              and record the data. Modern security cameras can be cloud-based so
+              that data is stored off-site and not on a vulnerab Motion sensors
+              can detect action occurring around your video surveillance camera.
+              Smart software allows your security team to program these cameras
+              to do things like zoom in on the movement. This can be combined
+              with an alarm or a floodlight feature, all while recording the
+              activate into the cloud.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-container2">
+        <div class="about-left">
+          <div>
+            <h1>About Management</h1>
+            <p>
+              It is a unique parking management system. Which is suitable for
+              all types of vehicles, it digitizes end-to end parking processes
+              including multi-tenant, multi-level parking, vehicle bassed
+              parking and many more. It is integrated with visitor management
+              system, FASTag, and access control hardware. Extremely useful for
+              shared parking spaces, the solution automates day-to-day processes
+              such as auto-identifying appropriate parking slots - be it
+              reserved or pay-and-park, auto-generating parking tickets, levying
+              penalties,and many more.
+            </p>
+          </div>
+        </div>
+        <div class="about-right">
+          <img src="./img/service/sedan.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!--? About Section End -->
+    <!--? Contact US Section Start -->
+    <section id="ContactUs">
+      <div>
+        <h1>Contact Us</h1>
+      </div>
+      <div id="contact-main">
+        <div class="message-img">
+          <img src="./img/service/message.webp" alt="" />
+        </div>
+        <div id="contactForm">
+          <form id="contactUsForm">
+            <div class="input">
+              <input
+                title="Please enter your name"
+                id="name"
+                type="text"
+                placeholder="Enter your name 📛"
+              />
+            </div>
+            <div class="input">
+              <input
+                title="Please enter the email address"
+                id="email"
+                type="email"
+                placeholder="Enter your email 📧"
+              />
+            </div>
+            <div class="input">
+              <input
+                title="Please enter mobile number"
+                id="mobNo"
+                type=" tel"
+                placeholder="Enter your number ☎️"
+              />
+            </div>
+            <div class="input">
+              <textarea
+                title="Please write you suggestion"
+                name=""
+                id="suggestion"
+                cols="30"
+                rows="5"
+                placeholder="Suggestion ✍️"
+              ></textarea>
+            </div>
+          </form>
+          <div class="input btn">
+            <div>
+              <button title="Send Message" onclick="SendMessage()">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--? Contact US Section End -->
+
+    <!-- ? footer start -->
+    <footer>
+      <div class="lower-row">
+        <div class="copyright">
+          © 2024 by Sarthak Gupta | Services for Parking | All rights reserved.
+        </div>
+        <div>Terms Conditons</div>
+      </div>
+    </footer>
+    <!-- ? footer end -->
+
+    <!--? Alert window -->
+    <script src="./js/service.js"></script>
+  </body>
+</html>
