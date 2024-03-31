@@ -155,3 +155,7 @@ checkFlexGap();
   }
 }
 */
+
+function redirect() {
+  window.location.href = "./service.html";
+}
