@@ -46,41 +46,4 @@
   .apply_promo button {
     font-size: 14px;
   }
-
-  .about-head p:first-child {
-    font-size: 1.5rem;
-  }
-
-  .about-head p:last-child {
-    font-size: 1.5rem;
-  }
-
-  .about-right h1,
-  .about-container2 .about-left h1 {
-    font-size: 1.1rem;
-  }
-
-  .about-container2 p,
-  .about-container1 p {
-    font-size: 0.8rem;
-    line-height: 20px;
-  }
-
-  #ContactUs h1 {
-    font-size: 1.5rem;
-  }
-
-  #contactUsForm .input input {
-    font-size: 14px;
-    padding: 4px 10px;
-  }
-
-  #contactForm .btn img {
-    width: 20px;
-  }
-
-  #contactForm button {
-    font-size: 14px;
-    padding: 4px 10px;
-  }
 }
