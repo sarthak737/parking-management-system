@@ -17,34 +17,34 @@ class Vehicle {
 // ? ==> Extending the from Vehicle Class car
 class Car extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "car");
+    super(owner, reg_n, "Car");
   }
 }
 
 //? ==> Extending the from Vehicle Class Jeep
 class Jeep extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "jeep");
+    super(owner, reg_n, "Jeep");
   }
 }
 // ? ==> Extending the from Vehicle Class Bus
 class Bus extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "bus");
+    super(owner, reg_n, "Bus");
   }
 }
 
 // ? ==> Extending the from Vehicle Class Bike
 class Bike extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "bike");
+    super(owner, reg_n, "Bike");
   }
 }
 
 //? ==> Extending the from Vehicle Class Truck
 class Truck extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "truck");
+    super(owner, reg_n, "Truck");
   }
 }
 
@@ -469,37 +469,6 @@ const showPromo = (promo, price, pay, pricing) => {
 };
 
 // TODO ==> invoking the send message function
-
-const SendMessage = () => {
-  const form = document.querySelector("#contactUsForm");
-  const name = form.name.value;
-  const email = form.email.value;
-  const phone = form.mobNo.value;
-  const suggestion = form.suggestion.value;
-
-  let firstVal;
-  let validateMsg = [name, email, phone, suggestion];
-  //validating the required fields
-  if (validateMsg.includes(undefined) || validateMsg.includes("")) {
-    let message = `⚠️ ${
-      name ? name.split(" ")[0] + "," : ""
-    } Please fill the all the required fields`;
-    showAlertBox(message, "danger");
-  } else {
-    firstVal = name.split(" ")[0];
-    let temp = firstVal[0].toUpperCase();
-    firstVal = `${temp}${firstVal.slice(1)}`;
-    //
-    let val = firstVal.length > 11 ? "normal" : "nowrap";
-    let message = `<div>✅ Feedback sent successfully!
-					<div style="white-space:${val}">${firstVal}, Thank you for your valuable suggestion</div></div>`;
-    showAlertBox(message, "success");
-    form.name.value = "";
-    form.email.value = "";
-    form.mobNo.value = "";
-    form.suggestion.value = "";
-  }
-};
 
 let id3;
 // TODO ===> -------Show AlertBox for showPromo-------
