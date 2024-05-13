@@ -17,34 +17,34 @@ class Vehicle {
 // ? ==> Extending the from Vehicle Class car
 class Car extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "Car");
+    super(owner, reg_n, "car");
   }
 }
 
 //? ==> Extending the from Vehicle Class Jeep
 class Jeep extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "Jeep");
+    super(owner, reg_n, "jeep");
   }
 }
 // ? ==> Extending the from Vehicle Class Bus
 class Bus extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "Bus");
+    super(owner, reg_n, "bus");
   }
 }
 
 // ? ==> Extending the from Vehicle Class Bike
 class Bike extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "Bike");
+    super(owner, reg_n, "bike");
   }
 }
 
 //? ==> Extending the from Vehicle Class Truck
 class Truck extends Vehicle {
   constructor(owner, reg_n) {
-    super(owner, reg_n, "Truck");
+    super(owner, reg_n, "truck");
   }
 }
 
